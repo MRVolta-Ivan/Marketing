@@ -49,7 +49,7 @@
             // 
             // exit_but
             // 
-            this.exit_but.Location = new System.Drawing.Point(330, 241);
+            this.exit_but.Location = new System.Drawing.Point(630, 409);
             this.exit_but.Name = "exit_but";
             this.exit_but.Size = new System.Drawing.Size(125, 40);
             this.exit_but.TabIndex = 69;
@@ -58,7 +58,7 @@
             // 
             // print_but
             // 
-            this.print_but.Location = new System.Drawing.Point(171, 241);
+            this.print_but.Location = new System.Drawing.Point(471, 409);
             this.print_but.Name = "print_but";
             this.print_but.Size = new System.Drawing.Size(125, 40);
             this.print_but.TabIndex = 68;
@@ -74,7 +74,7 @@
             // 
             // save_but
             // 
-            this.save_but.Location = new System.Drawing.Point(12, 241);
+            this.save_but.Location = new System.Drawing.Point(312, 409);
             this.save_but.Name = "save_but";
             this.save_but.Size = new System.Drawing.Size(125, 40);
             this.save_but.TabIndex = 66;
@@ -88,7 +88,7 @@
             this.segm_column});
             this.doc_table.Location = new System.Drawing.Point(12, 45);
             this.doc_table.Name = "doc_table";
-            this.doc_table.Size = new System.Drawing.Size(443, 168);
+            this.doc_table.Size = new System.Drawing.Size(743, 347);
             this.doc_table.TabIndex = 65;
             // 
             // segm_column
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 295);
+            this.ClientSize = new System.Drawing.Size(769, 461);
             this.Controls.Add(this.period_label);
             this.Controls.Add(this.exit_but);
             this.Controls.Add(this.print_but);

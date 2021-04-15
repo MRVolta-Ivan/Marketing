@@ -77,9 +77,9 @@
             this.fasovka_column,
             this.ed_izm_column,
             this.count_column});
-            this.v_anal_table.Location = new System.Drawing.Point(12, 33);
+            this.v_anal_table.Location = new System.Drawing.Point(12, 34);
             this.v_anal_table.Name = "v_anal_table";
-            this.v_anal_table.Size = new System.Drawing.Size(843, 135);
+            this.v_anal_table.Size = new System.Drawing.Size(960, 362);
             this.v_anal_table.TabIndex = 0;
             // 
             // tovar_column
@@ -125,7 +125,7 @@
             // org_label
             // 
             this.org_label.AutoSize = true;
-            this.org_label.Location = new System.Drawing.Point(24, 199);
+            this.org_label.Location = new System.Drawing.Point(16, 405);
             this.org_label.Name = "org_label";
             this.org_label.Size = new System.Drawing.Size(77, 13);
             this.org_label.TabIndex = 43;
@@ -134,7 +134,7 @@
             // tovar_label
             // 
             this.tovar_label.AutoSize = true;
-            this.tovar_label.Location = new System.Drawing.Point(24, 239);
+            this.tovar_label.Location = new System.Drawing.Point(16, 445);
             this.tovar_label.Name = "tovar_label";
             this.tovar_label.Size = new System.Drawing.Size(41, 13);
             this.tovar_label.TabIndex = 42;
@@ -143,7 +143,7 @@
             // fasovka_label
             // 
             this.fasovka_label.AutoSize = true;
-            this.fasovka_label.Location = new System.Drawing.Point(24, 279);
+            this.fasovka_label.Location = new System.Drawing.Point(16, 485);
             this.fasovka_label.Name = "fasovka_label";
             this.fasovka_label.Size = new System.Drawing.Size(57, 13);
             this.fasovka_label.TabIndex = 41;
@@ -152,7 +152,7 @@
             // date_label
             // 
             this.date_label.AutoSize = true;
-            this.date_label.Location = new System.Drawing.Point(282, 199);
+            this.date_label.Location = new System.Drawing.Point(274, 405);
             this.date_label.Name = "date_label";
             this.date_label.Size = new System.Drawing.Size(36, 13);
             this.date_label.TabIndex = 40;
@@ -161,7 +161,7 @@
             // tovar_shifr_label
             // 
             this.tovar_shifr_label.AutoSize = true;
-            this.tovar_shifr_label.Location = new System.Drawing.Point(282, 239);
+            this.tovar_shifr_label.Location = new System.Drawing.Point(274, 445);
             this.tovar_shifr_label.Name = "tovar_shifr_label";
             this.tovar_shifr_label.Size = new System.Drawing.Size(77, 13);
             this.tovar_shifr_label.TabIndex = 39;
@@ -170,7 +170,7 @@
             // price_label
             // 
             this.price_label.AutoSize = true;
-            this.price_label.Location = new System.Drawing.Point(282, 279);
+            this.price_label.Location = new System.Drawing.Point(274, 485);
             this.price_label.Name = "price_label";
             this.price_label.Size = new System.Drawing.Size(128, 13);
             this.price_label.TabIndex = 38;
@@ -178,7 +178,7 @@
             // 
             // exit_but
             // 
-            this.exit_but.Location = new System.Drawing.Point(780, 316);
+            this.exit_but.Location = new System.Drawing.Point(904, 522);
             this.exit_but.Name = "exit_but";
             this.exit_but.Size = new System.Drawing.Size(68, 22);
             this.exit_but.TabIndex = 37;
@@ -187,7 +187,7 @@
             // 
             // back_but
             // 
-            this.back_but.Location = new System.Drawing.Point(679, 316);
+            this.back_but.Location = new System.Drawing.Point(803, 522);
             this.back_but.Name = "back_but";
             this.back_but.Size = new System.Drawing.Size(70, 22);
             this.back_but.TabIndex = 36;
@@ -196,7 +196,7 @@
             // 
             // v_anal_but
             // 
-            this.v_anal_but.Location = new System.Drawing.Point(679, 226);
+            this.v_anal_but.Location = new System.Drawing.Point(803, 472);
             this.v_anal_but.Name = "v_anal_but";
             this.v_anal_but.Size = new System.Drawing.Size(169, 38);
             this.v_anal_but.TabIndex = 35;
@@ -205,28 +205,28 @@
             // 
             // data_textbox
             // 
-            this.data_textbox.Location = new System.Drawing.Point(416, 197);
+            this.data_textbox.Location = new System.Drawing.Point(408, 403);
             this.data_textbox.Name = "data_textbox";
             this.data_textbox.Size = new System.Drawing.Size(138, 20);
             this.data_textbox.TabIndex = 34;
             // 
             // tovar_shifr_textbox
             // 
-            this.tovar_shifr_textbox.Location = new System.Drawing.Point(416, 239);
+            this.tovar_shifr_textbox.Location = new System.Drawing.Point(408, 445);
             this.tovar_shifr_textbox.Name = "tovar_shifr_textbox";
             this.tovar_shifr_textbox.Size = new System.Drawing.Size(138, 20);
             this.tovar_shifr_textbox.TabIndex = 33;
             // 
             // price_textbox
             // 
-            this.price_textbox.Location = new System.Drawing.Point(416, 277);
+            this.price_textbox.Location = new System.Drawing.Point(408, 483);
             this.price_textbox.Name = "price_textbox";
             this.price_textbox.Size = new System.Drawing.Size(138, 20);
             this.price_textbox.TabIndex = 32;
             // 
             // clear_but
             // 
-            this.clear_but.Location = new System.Drawing.Point(215, 316);
+            this.clear_but.Location = new System.Drawing.Point(207, 522);
             this.clear_but.Name = "clear_but";
             this.clear_but.Size = new System.Drawing.Size(120, 22);
             this.clear_but.TabIndex = 31;
@@ -235,7 +235,7 @@
             // 
             // minus_but
             // 
-            this.minus_but.Location = new System.Drawing.Point(185, 316);
+            this.minus_but.Location = new System.Drawing.Point(177, 522);
             this.minus_but.Name = "minus_but";
             this.minus_but.Size = new System.Drawing.Size(24, 22);
             this.minus_but.TabIndex = 30;
@@ -244,7 +244,7 @@
             // 
             // plus_but
             // 
-            this.plus_but.Location = new System.Drawing.Point(155, 316);
+            this.plus_but.Location = new System.Drawing.Point(147, 522);
             this.plus_but.Name = "plus_but";
             this.plus_but.Size = new System.Drawing.Size(24, 22);
             this.plus_but.TabIndex = 29;
@@ -253,7 +253,7 @@
             // 
             // filtr_but
             // 
-            this.filtr_but.Location = new System.Drawing.Point(27, 316);
+            this.filtr_but.Location = new System.Drawing.Point(19, 522);
             this.filtr_but.Name = "filtr_but";
             this.filtr_but.Size = new System.Drawing.Size(122, 22);
             this.filtr_but.TabIndex = 28;
@@ -263,7 +263,7 @@
             // fasovka_combox
             // 
             this.fasovka_combox.FormattingEnabled = true;
-            this.fasovka_combox.Location = new System.Drawing.Point(107, 277);
+            this.fasovka_combox.Location = new System.Drawing.Point(99, 483);
             this.fasovka_combox.Name = "fasovka_combox";
             this.fasovka_combox.Size = new System.Drawing.Size(139, 21);
             this.fasovka_combox.TabIndex = 27;
@@ -271,7 +271,7 @@
             // tovar_combox
             // 
             this.tovar_combox.FormattingEnabled = true;
-            this.tovar_combox.Location = new System.Drawing.Point(107, 236);
+            this.tovar_combox.Location = new System.Drawing.Point(99, 442);
             this.tovar_combox.Name = "tovar_combox";
             this.tovar_combox.Size = new System.Drawing.Size(139, 21);
             this.tovar_combox.TabIndex = 26;
@@ -279,7 +279,7 @@
             // org_combox
             // 
             this.org_combox.FormattingEnabled = true;
-            this.org_combox.Location = new System.Drawing.Point(107, 196);
+            this.org_combox.Location = new System.Drawing.Point(99, 402);
             this.org_combox.Name = "org_combox";
             this.org_combox.Size = new System.Drawing.Size(139, 21);
             this.org_combox.TabIndex = 25;
@@ -331,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 359);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.new_org_label);
             this.Controls.Add(this.new_date_label);
             this.Controls.Add(this.new_pricelist_but);

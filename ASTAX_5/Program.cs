@@ -16,7 +16,7 @@ namespace ASTAX_5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_form());
+            Application.Run(new LoginForm());
         }
     }
 }
