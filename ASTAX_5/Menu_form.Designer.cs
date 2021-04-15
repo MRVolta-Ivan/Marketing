@@ -51,6 +51,7 @@
             this.V_anal_but.TabIndex = 1;
             this.V_anal_but.Text = "Анализ объема продаж по территориальным сегментам";
             this.V_anal_but.UseVisualStyleBackColor = true;
+            this.V_anal_but.Click += new System.EventHandler(this.V_anal_but_Click);
             // 
             // exit_but
             // 
@@ -60,6 +61,7 @@
             this.exit_but.TabIndex = 2;
             this.exit_but.Text = "Выход";
             this.exit_but.UseVisualStyleBackColor = true;
+            this.exit_but.Click += new System.EventHandler(this.exit_but_Click);
             // 
             // Menu_form
             // 
@@ -71,6 +73,7 @@
             this.Controls.Add(this.conc_anal_but);
             this.Name = "Menu_form";
             this.Text = "Меню";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_form_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

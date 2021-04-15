@@ -56,7 +56,7 @@
             // tovar_label
             // 
             this.tovar_label.AutoSize = true;
-            this.tovar_label.Location = new System.Drawing.Point(18, 221);
+            this.tovar_label.Location = new System.Drawing.Point(18, 352);
             this.tovar_label.Name = "tovar_label";
             this.tovar_label.Size = new System.Drawing.Size(41, 13);
             this.tovar_label.TabIndex = 63;
@@ -65,7 +65,7 @@
             // fasovka_label
             // 
             this.fasovka_label.AutoSize = true;
-            this.fasovka_label.Location = new System.Drawing.Point(18, 261);
+            this.fasovka_label.Location = new System.Drawing.Point(18, 392);
             this.fasovka_label.Name = "fasovka_label";
             this.fasovka_label.Size = new System.Drawing.Size(57, 13);
             this.fasovka_label.TabIndex = 62;
@@ -74,7 +74,7 @@
             // tovar_shifr_label
             // 
             this.tovar_shifr_label.AutoSize = true;
-            this.tovar_shifr_label.Location = new System.Drawing.Point(276, 221);
+            this.tovar_shifr_label.Location = new System.Drawing.Point(276, 352);
             this.tovar_shifr_label.Name = "tovar_shifr_label";
             this.tovar_shifr_label.Size = new System.Drawing.Size(77, 13);
             this.tovar_shifr_label.TabIndex = 61;
@@ -83,7 +83,7 @@
             // price_label
             // 
             this.price_label.AutoSize = true;
-            this.price_label.Location = new System.Drawing.Point(276, 261);
+            this.price_label.Location = new System.Drawing.Point(276, 392);
             this.price_label.Name = "price_label";
             this.price_label.Size = new System.Drawing.Size(128, 13);
             this.price_label.TabIndex = 60;
@@ -91,7 +91,7 @@
             // 
             // back_exit_but
             // 
-            this.back_exit_but.Location = new System.Drawing.Point(685, 298);
+            this.back_exit_but.Location = new System.Drawing.Point(685, 429);
             this.back_exit_but.Name = "back_exit_but";
             this.back_exit_but.Size = new System.Drawing.Size(70, 22);
             this.back_exit_but.TabIndex = 58;
@@ -100,21 +100,21 @@
             // 
             // tovar_shifr_textbox
             // 
-            this.tovar_shifr_textbox.Location = new System.Drawing.Point(410, 221);
+            this.tovar_shifr_textbox.Location = new System.Drawing.Point(410, 352);
             this.tovar_shifr_textbox.Name = "tovar_shifr_textbox";
             this.tovar_shifr_textbox.Size = new System.Drawing.Size(138, 20);
             this.tovar_shifr_textbox.TabIndex = 57;
             // 
             // price_textbox
             // 
-            this.price_textbox.Location = new System.Drawing.Point(410, 259);
+            this.price_textbox.Location = new System.Drawing.Point(410, 390);
             this.price_textbox.Name = "price_textbox";
             this.price_textbox.Size = new System.Drawing.Size(138, 20);
             this.price_textbox.TabIndex = 56;
             // 
             // clear_but
             // 
-            this.clear_but.Location = new System.Drawing.Point(209, 298);
+            this.clear_but.Location = new System.Drawing.Point(209, 429);
             this.clear_but.Name = "clear_but";
             this.clear_but.Size = new System.Drawing.Size(120, 22);
             this.clear_but.TabIndex = 55;
@@ -123,7 +123,7 @@
             // 
             // minus_but
             // 
-            this.minus_but.Location = new System.Drawing.Point(179, 298);
+            this.minus_but.Location = new System.Drawing.Point(179, 429);
             this.minus_but.Name = "minus_but";
             this.minus_but.Size = new System.Drawing.Size(24, 22);
             this.minus_but.TabIndex = 54;
@@ -132,7 +132,7 @@
             // 
             // plus_but
             // 
-            this.plus_but.Location = new System.Drawing.Point(149, 298);
+            this.plus_but.Location = new System.Drawing.Point(149, 429);
             this.plus_but.Name = "plus_but";
             this.plus_but.Size = new System.Drawing.Size(24, 22);
             this.plus_but.TabIndex = 53;
@@ -141,7 +141,7 @@
             // 
             // filtr_but
             // 
-            this.filtr_but.Location = new System.Drawing.Point(21, 298);
+            this.filtr_but.Location = new System.Drawing.Point(21, 429);
             this.filtr_but.Name = "filtr_but";
             this.filtr_but.Size = new System.Drawing.Size(122, 22);
             this.filtr_but.TabIndex = 52;
@@ -151,7 +151,7 @@
             // fasovka_combox
             // 
             this.fasovka_combox.FormattingEnabled = true;
-            this.fasovka_combox.Location = new System.Drawing.Point(101, 259);
+            this.fasovka_combox.Location = new System.Drawing.Point(101, 390);
             this.fasovka_combox.Name = "fasovka_combox";
             this.fasovka_combox.Size = new System.Drawing.Size(139, 21);
             this.fasovka_combox.TabIndex = 51;
@@ -159,7 +159,7 @@
             // tovar_combox
             // 
             this.tovar_combox.FormattingEnabled = true;
-            this.tovar_combox.Location = new System.Drawing.Point(101, 218);
+            this.tovar_combox.Location = new System.Drawing.Point(101, 349);
             this.tovar_combox.Name = "tovar_combox";
             this.tovar_combox.Size = new System.Drawing.Size(139, 21);
             this.tovar_combox.TabIndex = 50;
@@ -177,7 +177,7 @@
             this.ed_izmer_column});
             this.incude_table.Location = new System.Drawing.Point(12, 12);
             this.incude_table.Name = "incude_table";
-            this.incude_table.Size = new System.Drawing.Size(743, 189);
+            this.incude_table.Size = new System.Drawing.Size(743, 331);
             this.incude_table.TabIndex = 49;
             // 
             // date_column
@@ -217,7 +217,7 @@
             // 
             // save_exit_but
             // 
-            this.save_exit_but.Location = new System.Drawing.Point(578, 298);
+            this.save_exit_but.Location = new System.Drawing.Point(578, 429);
             this.save_exit_but.Name = "save_exit_but";
             this.save_exit_but.Size = new System.Drawing.Size(70, 22);
             this.save_exit_but.TabIndex = 64;
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 336);
+            this.ClientSize = new System.Drawing.Size(769, 461);
             this.Controls.Add(this.save_exit_but);
             this.Controls.Add(this.tovar_label);
             this.Controls.Add(this.fasovka_label);
