@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.v_anal_table = new System.Windows.Forms.DataGridView();
-            this.tovar_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tovar_shifr_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.org_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fasovka_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ed_izm_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.count_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.org_label = new System.Windows.Forms.Label();
             this.tovar_label = new System.Windows.Forms.Label();
             this.fasovka_label = new System.Windows.Forms.Label();
@@ -49,78 +41,49 @@
             this.data_textbox = new System.Windows.Forms.TextBox();
             this.tovar_shifr_textbox = new System.Windows.Forms.TextBox();
             this.price_textbox = new System.Windows.Forms.TextBox();
-            this.clear_but = new System.Windows.Forms.Button();
-            this.minus_but = new System.Windows.Forms.Button();
-            this.plus_but = new System.Windows.Forms.Button();
             this.filtr_but = new System.Windows.Forms.Button();
             this.fasovka_combox = new System.Windows.Forms.ComboBox();
             this.tovar_combox = new System.Windows.Forms.ComboBox();
             this.org_combox = new System.Windows.Forms.ComboBox();
-            this.new_org_label = new System.Windows.Forms.Label();
             this.new_date_label = new System.Windows.Forms.Label();
             this.new_pricelist_but = new System.Windows.Forms.Button();
             this.new_date_combox = new System.Windows.Forms.ComboBox();
             this.new_org_combox = new System.Windows.Forms.ComboBox();
+            this.new_org_label = new System.Windows.Forms.Label();
+            this.clear_but = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tovar_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tovar_shifr_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.org_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.count_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fasovka_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ed_izm_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).BeginInit();
             this.SuspendLayout();
             // 
             // v_anal_table
             // 
-            this.v_anal_table.AllowUserToOrderColumns = true;
+            this.v_anal_table.AllowUserToAddRows = false;
+            this.v_anal_table.AllowUserToDeleteRows = false;
+            this.v_anal_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.v_anal_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.v_anal_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tovar_column,
+            this.Id,
             this.date_column,
+            this.tovar_column,
             this.tovar_shifr_col,
             this.org_column,
+            this.count_column,
             this.price_column,
             this.fasovka_column,
-            this.ed_izm_column,
-            this.count_column});
+            this.ed_izm_column});
             this.v_anal_table.Location = new System.Drawing.Point(12, 34);
             this.v_anal_table.Name = "v_anal_table";
+            this.v_anal_table.ReadOnly = true;
             this.v_anal_table.Size = new System.Drawing.Size(960, 362);
             this.v_anal_table.TabIndex = 0;
-            // 
-            // tovar_column
-            // 
-            this.tovar_column.HeaderText = "Товар";
-            this.tovar_column.Name = "tovar_column";
-            // 
-            // date_column
-            // 
-            this.date_column.HeaderText = "Дата";
-            this.date_column.Name = "date_column";
-            // 
-            // tovar_shifr_col
-            // 
-            this.tovar_shifr_col.HeaderText = "Шифр товара";
-            this.tovar_shifr_col.Name = "tovar_shifr_col";
-            // 
-            // org_column
-            // 
-            this.org_column.HeaderText = "Организация";
-            this.org_column.Name = "org_column";
-            // 
-            // price_column
-            // 
-            this.price_column.HeaderText = "Цена";
-            this.price_column.Name = "price_column";
-            // 
-            // fasovka_column
-            // 
-            this.fasovka_column.HeaderText = "Фасовка";
-            this.fasovka_column.Name = "fasovka_column";
-            // 
-            // ed_izm_column
-            // 
-            this.ed_izm_column.HeaderText = "Единицы измерения";
-            this.ed_izm_column.Name = "ed_izm_column";
-            // 
-            // count_column
-            // 
-            this.count_column.HeaderText = "Количество";
-            this.count_column.Name = "count_column";
             // 
             // org_label
             // 
@@ -224,33 +187,6 @@
             this.price_textbox.Size = new System.Drawing.Size(138, 20);
             this.price_textbox.TabIndex = 32;
             // 
-            // clear_but
-            // 
-            this.clear_but.Location = new System.Drawing.Point(207, 522);
-            this.clear_but.Name = "clear_but";
-            this.clear_but.Size = new System.Drawing.Size(120, 22);
-            this.clear_but.TabIndex = 31;
-            this.clear_but.Text = "Сброс";
-            this.clear_but.UseVisualStyleBackColor = true;
-            // 
-            // minus_but
-            // 
-            this.minus_but.Location = new System.Drawing.Point(177, 522);
-            this.minus_but.Name = "minus_but";
-            this.minus_but.Size = new System.Drawing.Size(24, 22);
-            this.minus_but.TabIndex = 30;
-            this.minus_but.Text = "-";
-            this.minus_but.UseVisualStyleBackColor = true;
-            // 
-            // plus_but
-            // 
-            this.plus_but.Location = new System.Drawing.Point(147, 522);
-            this.plus_but.Name = "plus_but";
-            this.plus_but.Size = new System.Drawing.Size(24, 22);
-            this.plus_but.TabIndex = 29;
-            this.plus_but.Text = "+";
-            this.plus_but.UseVisualStyleBackColor = true;
-            // 
             // filtr_but
             // 
             this.filtr_but.Location = new System.Drawing.Point(19, 522);
@@ -283,15 +219,6 @@
             this.org_combox.Name = "org_combox";
             this.org_combox.Size = new System.Drawing.Size(139, 21);
             this.org_combox.TabIndex = 25;
-            // 
-            // new_org_label
-            // 
-            this.new_org_label.AutoSize = true;
-            this.new_org_label.Location = new System.Drawing.Point(9, 9);
-            this.new_org_label.Name = "new_org_label";
-            this.new_org_label.Size = new System.Drawing.Size(77, 13);
-            this.new_org_label.TabIndex = 48;
-            this.new_org_label.Text = "Организация:";
             // 
             // new_date_label
             // 
@@ -327,6 +254,79 @@
             this.new_org_combox.Size = new System.Drawing.Size(165, 21);
             this.new_org_combox.TabIndex = 44;
             // 
+            // new_org_label
+            // 
+            this.new_org_label.AutoSize = true;
+            this.new_org_label.Location = new System.Drawing.Point(9, 9);
+            this.new_org_label.Name = "new_org_label";
+            this.new_org_label.Size = new System.Drawing.Size(77, 13);
+            this.new_org_label.TabIndex = 48;
+            this.new_org_label.Text = "Организация:";
+            // 
+            // clear_but
+            // 
+            this.clear_but.Location = new System.Drawing.Point(147, 522);
+            this.clear_but.Name = "clear_but";
+            this.clear_but.Size = new System.Drawing.Size(120, 22);
+            this.clear_but.TabIndex = 31;
+            this.clear_but.Text = "Сброс";
+            this.clear_but.UseVisualStyleBackColor = true;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ПК";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // date_column
+            // 
+            this.date_column.HeaderText = "Дата";
+            this.date_column.Name = "date_column";
+            this.date_column.ReadOnly = true;
+            // 
+            // tovar_column
+            // 
+            this.tovar_column.HeaderText = "Товар";
+            this.tovar_column.Name = "tovar_column";
+            this.tovar_column.ReadOnly = true;
+            // 
+            // tovar_shifr_col
+            // 
+            this.tovar_shifr_col.HeaderText = "Шифр товара";
+            this.tovar_shifr_col.Name = "tovar_shifr_col";
+            this.tovar_shifr_col.ReadOnly = true;
+            // 
+            // org_column
+            // 
+            this.org_column.HeaderText = "Организация";
+            this.org_column.Name = "org_column";
+            this.org_column.ReadOnly = true;
+            // 
+            // count_column
+            // 
+            this.count_column.HeaderText = "Количество";
+            this.count_column.Name = "count_column";
+            this.count_column.ReadOnly = true;
+            // 
+            // price_column
+            // 
+            this.price_column.HeaderText = "Цена";
+            this.price_column.Name = "price_column";
+            this.price_column.ReadOnly = true;
+            // 
+            // fasovka_column
+            // 
+            this.fasovka_column.HeaderText = "Фасовка";
+            this.fasovka_column.Name = "fasovka_column";
+            this.fasovka_column.ReadOnly = true;
+            // 
+            // ed_izm_column
+            // 
+            this.ed_izm_column.HeaderText = "Единицы измерения";
+            this.ed_izm_column.Name = "ed_izm_column";
+            this.ed_izm_column.ReadOnly = true;
+            // 
             // V_anal_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,8 +350,6 @@
             this.Controls.Add(this.tovar_shifr_textbox);
             this.Controls.Add(this.price_textbox);
             this.Controls.Add(this.clear_but);
-            this.Controls.Add(this.minus_but);
-            this.Controls.Add(this.plus_but);
             this.Controls.Add(this.filtr_but);
             this.Controls.Add(this.fasovka_combox);
             this.Controls.Add(this.tovar_combox);
@@ -359,6 +357,7 @@
             this.Controls.Add(this.v_anal_table);
             this.Name = "V_anal_form";
             this.Text = "Анализ объема продаж по территориальным сегментам";
+            this.Load += new System.EventHandler(this.V_anal_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -368,14 +367,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView v_anal_table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tovar_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tovar_shifr_col;
-        private System.Windows.Forms.DataGridViewTextBoxColumn org_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fasovka_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ed_izm_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn count_column;
         private System.Windows.Forms.Label org_label;
         private System.Windows.Forms.Label tovar_label;
         private System.Windows.Forms.Label fasovka_label;
@@ -388,17 +379,24 @@
         private System.Windows.Forms.TextBox data_textbox;
         private System.Windows.Forms.TextBox tovar_shifr_textbox;
         private System.Windows.Forms.TextBox price_textbox;
-        private System.Windows.Forms.Button clear_but;
-        private System.Windows.Forms.Button minus_but;
-        private System.Windows.Forms.Button plus_but;
         private System.Windows.Forms.Button filtr_but;
         private System.Windows.Forms.ComboBox fasovka_combox;
         private System.Windows.Forms.ComboBox tovar_combox;
         private System.Windows.Forms.ComboBox org_combox;
-        private System.Windows.Forms.Label new_org_label;
         private System.Windows.Forms.Label new_date_label;
         private System.Windows.Forms.Button new_pricelist_but;
         private System.Windows.Forms.ComboBox new_date_combox;
         private System.Windows.Forms.ComboBox new_org_combox;
+        private System.Windows.Forms.Label new_org_label;
+        private System.Windows.Forms.Button clear_but;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tovar_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tovar_shifr_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn org_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn count_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fasovka_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ed_izm_column;
     }
 }

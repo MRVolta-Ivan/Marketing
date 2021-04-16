@@ -33,7 +33,7 @@ namespace ASTAX_5.Repository
 
         public List<InputOutput> GetAll()
         {
-            return Mapper(connection.ExecuteSQL("select * from getlistinputoutput"));
+            return Mapper(connection.ExecuteSQL("select * from getlistinputoutput()"));
         }
 
         public long Add(

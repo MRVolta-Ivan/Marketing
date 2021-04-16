@@ -35,9 +35,6 @@
             this.back_exit_but = new System.Windows.Forms.Button();
             this.tovar_shifr_textbox = new System.Windows.Forms.TextBox();
             this.price_textbox = new System.Windows.Forms.TextBox();
-            this.clear_but = new System.Windows.Forms.Button();
-            this.minus_but = new System.Windows.Forms.Button();
-            this.plus_but = new System.Windows.Forms.Button();
             this.filtr_but = new System.Windows.Forms.Button();
             this.fasovka_combox = new System.Windows.Forms.ComboBox();
             this.tovar_combox = new System.Windows.Forms.ComboBox();
@@ -50,6 +47,7 @@
             this.fasovka_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ed_izmer_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.save_exit_but = new System.Windows.Forms.Button();
+            this.clear_but = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.incude_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,33 +109,6 @@
             this.price_textbox.Name = "price_textbox";
             this.price_textbox.Size = new System.Drawing.Size(138, 20);
             this.price_textbox.TabIndex = 56;
-            // 
-            // clear_but
-            // 
-            this.clear_but.Location = new System.Drawing.Point(209, 429);
-            this.clear_but.Name = "clear_but";
-            this.clear_but.Size = new System.Drawing.Size(120, 22);
-            this.clear_but.TabIndex = 55;
-            this.clear_but.Text = "Сброс";
-            this.clear_but.UseVisualStyleBackColor = true;
-            // 
-            // minus_but
-            // 
-            this.minus_but.Location = new System.Drawing.Point(179, 429);
-            this.minus_but.Name = "minus_but";
-            this.minus_but.Size = new System.Drawing.Size(24, 22);
-            this.minus_but.TabIndex = 54;
-            this.minus_but.Text = "-";
-            this.minus_but.UseVisualStyleBackColor = true;
-            // 
-            // plus_but
-            // 
-            this.plus_but.Location = new System.Drawing.Point(149, 429);
-            this.plus_but.Name = "plus_but";
-            this.plus_but.Size = new System.Drawing.Size(24, 22);
-            this.plus_but.TabIndex = 53;
-            this.plus_but.Text = "+";
-            this.plus_but.UseVisualStyleBackColor = true;
             // 
             // filtr_but
             // 
@@ -224,6 +195,15 @@
             this.save_exit_but.Text = "Принять";
             this.save_exit_but.UseVisualStyleBackColor = true;
             // 
+            // clear_but
+            // 
+            this.clear_but.Location = new System.Drawing.Point(149, 429);
+            this.clear_but.Name = "clear_but";
+            this.clear_but.Size = new System.Drawing.Size(120, 22);
+            this.clear_but.TabIndex = 55;
+            this.clear_but.Text = "Сброс";
+            this.clear_but.UseVisualStyleBackColor = true;
+            // 
             // Include_v_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,8 +218,6 @@
             this.Controls.Add(this.tovar_shifr_textbox);
             this.Controls.Add(this.price_textbox);
             this.Controls.Add(this.clear_but);
-            this.Controls.Add(this.minus_but);
-            this.Controls.Add(this.plus_but);
             this.Controls.Add(this.filtr_but);
             this.Controls.Add(this.fasovka_combox);
             this.Controls.Add(this.tovar_combox);
@@ -261,9 +239,6 @@
         private System.Windows.Forms.Button back_exit_but;
         private System.Windows.Forms.TextBox tovar_shifr_textbox;
         private System.Windows.Forms.TextBox price_textbox;
-        private System.Windows.Forms.Button clear_but;
-        private System.Windows.Forms.Button minus_but;
-        private System.Windows.Forms.Button plus_but;
         private System.Windows.Forms.Button filtr_but;
         private System.Windows.Forms.ComboBox fasovka_combox;
         private System.Windows.Forms.ComboBox tovar_combox;
@@ -276,5 +251,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fasovka_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn ed_izmer_column;
         private System.Windows.Forms.Button save_exit_but;
+        private System.Windows.Forms.Button clear_but;
     }
 }
