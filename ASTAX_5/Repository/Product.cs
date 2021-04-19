@@ -31,6 +31,11 @@ namespace ASTAX_5.Repository
             return Mapper(connection.ExecuteSQL("select * from getlistproduct()"));
         }
 
+        public Product GetById(long id)
+        {
+            return Mapper(connection.ExecuteSQL("select * from \"Product\" where \"PK_Product\" = "+id+""))[0];
+        }
+
         public long Add(
             string shifr,
             string name)

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ASTAX_5
 {
-    public partial class Include_v_form : Form
+    public partial class Search_c_form : Form
     {
-        public Include_v_form()
+        public Search_c_form()
         {
             InitializeComponent();
         }
 
- 
+       
     }
 }

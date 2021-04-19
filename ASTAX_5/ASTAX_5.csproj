@@ -99,11 +99,11 @@
     <Compile Include="Doc_v_form.Designer.cs">
       <DependentUpon>Doc_v_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Include_a_form.cs">
+    <Compile Include="Include_c_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Include_a_form.Designer.cs">
-      <DependentUpon>Include_a_form.cs</DependentUpon>
+    <Compile Include="Include_c_form.Designer.cs">
+      <DependentUpon>Include_c_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Include_v_form.cs">
       <SubType>Form</SubType>
@@ -116,6 +116,18 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_c_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_c_form.Designer.cs">
+      <DependentUpon>Menu_c_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_v_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_v_form.Designer.cs">
+      <DependentUpon>Menu_v_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_form.cs">
       <SubType>Form</SubType>
@@ -132,11 +144,29 @@
     <Compile Include="Repository\Product.cs" />
     <Compile Include="Repository\Segment.cs" />
     <Compile Include="Repository\TypeSegment.cs" />
-    <Compile Include="V_anal_form.cs">
+    <Compile Include="Search_c_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="V_anal_form.Designer.cs">
-      <DependentUpon>V_anal_form.cs</DependentUpon>
+    <Compile Include="Search_c_form.Designer.cs">
+      <DependentUpon>Search_c_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_c_table_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_c_table_form.Designer.cs">
+      <DependentUpon>Search_c_table_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_v_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_v_form.Designer.cs">
+      <DependentUpon>Search_v_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_v_table_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_v_table_form.Designer.cs">
+      <DependentUpon>Search_v_table_form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Conc_anal_form.resx">
       <DependentUpon>Conc_anal_form.cs</DependentUpon>
@@ -147,14 +177,20 @@
     <EmbeddedResource Include="Doc_v_form.resx">
       <DependentUpon>Doc_v_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Include_a_form.resx">
-      <DependentUpon>Include_a_form.cs</DependentUpon>
+    <EmbeddedResource Include="Include_c_form.resx">
+      <DependentUpon>Include_c_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Include_v_form.resx">
       <DependentUpon>Include_v_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_c_form.resx">
+      <DependentUpon>Menu_c_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_v_form.resx">
+      <DependentUpon>Menu_v_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_form.resx">
       <DependentUpon>Menu_form.cs</DependentUpon>
@@ -168,8 +204,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="V_anal_form.resx">
-      <DependentUpon>V_anal_form.cs</DependentUpon>
+    <EmbeddedResource Include="Search_c_form.resx">
+      <DependentUpon>Search_c_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_c_table_form.resx">
+      <DependentUpon>Search_c_table_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_v_form.resx">
+      <DependentUpon>Search_v_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_v_table_form.resx">
+      <DependentUpon>Search_v_table_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
