@@ -32,6 +32,11 @@ namespace ASTAX_5.Repository
             return Mapper(connection.ExecuteSQL("select * from getlistorg()"));
         }
 
+        public Org GetById(long id)
+        {
+            return Mapper(connection.ExecuteSQL("select * from \"Org\" where \"PK_Org\" = "+id+""))[0];
+        }
+
         public long Add(
             string shifr,
             string name,

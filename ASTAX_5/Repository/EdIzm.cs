@@ -31,6 +31,11 @@ namespace ASTAX_5.Repository
             return Mapper(connection.ExecuteSQL("select * from getlistedizm()"));
         }
 
+        public EdIzm GetById(long id)
+        {
+            return Mapper(connection.ExecuteSQL("select * from \"Ed_izm\" where \"PK_Ed_izm\" = "+id+""))[0];
+        }
+
         public long Add(
             string shifr,
             string name)

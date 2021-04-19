@@ -52,7 +52,7 @@ namespace ASTAX_5
 
         private void V_anal_but_Click(object sender, EventArgs e)
         {
-            V_anal_form form = new V_anal_form();
+            Search_v_form form = new Search_v_form();
             form.ShowDialog();
         }
     }

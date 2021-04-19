@@ -35,9 +35,9 @@
             // 
             // conc_anal_but
             // 
-            this.conc_anal_but.Location = new System.Drawing.Point(39, 30);
+            this.conc_anal_but.Location = new System.Drawing.Point(116, 46);
             this.conc_anal_but.Name = "conc_anal_but";
-            this.conc_anal_but.Size = new System.Drawing.Size(192, 45);
+            this.conc_anal_but.Size = new System.Drawing.Size(256, 68);
             this.conc_anal_but.TabIndex = 0;
             this.conc_anal_but.Text = "Конкурентный анализ";
             this.conc_anal_but.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // V_anal_but
             // 
-            this.V_anal_but.Location = new System.Drawing.Point(39, 91);
+            this.V_anal_but.Location = new System.Drawing.Point(116, 149);
             this.V_anal_but.Name = "V_anal_but";
-            this.V_anal_but.Size = new System.Drawing.Size(192, 47);
+            this.V_anal_but.Size = new System.Drawing.Size(256, 68);
             this.V_anal_but.TabIndex = 1;
             this.V_anal_but.Text = "Анализ объема продаж по территориальным сегментам";
             this.V_anal_but.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // exit_but
             // 
-            this.exit_but.Location = new System.Drawing.Point(39, 154);
+            this.exit_but.Location = new System.Drawing.Point(116, 250);
             this.exit_but.Name = "exit_but";
-            this.exit_but.Size = new System.Drawing.Size(192, 40);
+            this.exit_but.Size = new System.Drawing.Size(256, 68);
             this.exit_but.TabIndex = 2;
             this.exit_but.Text = "Выход";
             this.exit_but.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 223);
+            this.ClientSize = new System.Drawing.Size(487, 368);
             this.Controls.Add(this.exit_but);
             this.Controls.Add(this.V_anal_but);
             this.Controls.Add(this.conc_anal_but);
