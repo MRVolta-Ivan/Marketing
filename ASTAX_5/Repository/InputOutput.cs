@@ -20,9 +20,9 @@ namespace ASTAX_5.Repository
                     new InputOutput(
                         Convert.ToInt64(i[0]),
                         i[1],
-                        Convert.ToInt64(i[2]),
-                        Convert.ToDouble(i[3]),
-                        Convert.ToInt64(i[4]),
+                        i[2],
+                        Convert.ToInt64(i[3]),
+                        Convert.ToDouble(i[4]),
                         Convert.ToInt64(i[5]),
                         Convert.ToInt64(i[6]),
                         Convert.ToInt64(i[7])));
@@ -38,17 +38,17 @@ namespace ASTAX_5.Repository
 
         public long Add(
             string date,
+            string number,
             long count,
             double price,
             long org,
             long product,
-            long edizm,
-            long fasovka)
+            long edizm)
         {
-            connection.ExecuteSQL("call addinputoutput('"+date+"', "
+            connection.ExecuteSQL("call addinputoutput('"+date+"', '"+number+"',"
                 +count+
                 ", " + price.ToString().Replace(',', '.') + ", "+org+
-                ", "+product+", "+edizm+", "+fasovka+")");
+                ", "+product+", "+edizm+")");
 
             List<InputOutput> data = GetAll();
 
@@ -65,14 +65,14 @@ namespace ASTAX_5.Repository
     {
         public long id;
         public string date;
+        public string number;
         public long count;
         public double price;
         public long org;
         public long product;
-        public long edizm;
-        public long fasovka;
+        public long edizm;;
 
-        public InputOutput(long id, string date, long count, double price, long org, long product, long edizm, long fasovka)
+        public InputOutput(long id, string date, string number, long count, double price, long org, long product, long edizm)
         {
             this.id = id;
             this.date = date;
@@ -81,7 +81,7 @@ namespace ASTAX_5.Repository
             this.org = org;
             this.product = product;
             this.edizm = edizm;
-            this.fasovka = fasovka;
+            this.number = number;
         }
     }
 }
