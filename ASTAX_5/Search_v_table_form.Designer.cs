@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.v_anal_table = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.back_but = new System.Windows.Forms.Button();
             this.date_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.num_doc_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tovar_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +39,6 @@
             this.count_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ed_izm_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.back_but = new System.Windows.Forms.Button();
-            this.exit_but = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +49,6 @@
             this.v_anal_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.v_anal_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.v_anal_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.date_column,
             this.num_doc_column,
             this.tovar_column,
@@ -67,12 +64,15 @@
             this.v_anal_table.Size = new System.Drawing.Size(959, 464);
             this.v_anal_table.TabIndex = 1;
             // 
-            // Id
+            // back_but
             // 
-            this.Id.HeaderText = "ПК";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.back_but.Location = new System.Drawing.Point(16, 12);
+            this.back_but.Name = "back_but";
+            this.back_but.Size = new System.Drawing.Size(175, 37);
+            this.back_but.TabIndex = 2;
+            this.back_but.Text = "Вернуться к поиску данных";
+            this.back_but.UseVisualStyleBackColor = true;
+            this.back_but.Click += new System.EventHandler(this.back_but_Click);
             // 
             // date_column
             // 
@@ -128,34 +128,16 @@
             this.ed_izm_column.Name = "ed_izm_column";
             this.ed_izm_column.ReadOnly = true;
             // 
-            // back_but
-            // 
-            this.back_but.Location = new System.Drawing.Point(306, 12);
-            this.back_but.Name = "back_but";
-            this.back_but.Size = new System.Drawing.Size(175, 37);
-            this.back_but.TabIndex = 2;
-            this.back_but.Text = "Вернуться к поиску данных";
-            this.back_but.UseVisualStyleBackColor = true;
-            // 
-            // exit_but
-            // 
-            this.exit_but.Location = new System.Drawing.Point(509, 12);
-            this.exit_but.Name = "exit_but";
-            this.exit_but.Size = new System.Drawing.Size(175, 37);
-            this.exit_but.TabIndex = 3;
-            this.exit_but.Text = "Выйти в меню";
-            this.exit_but.UseVisualStyleBackColor = true;
-            // 
             // Search_v_table_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 531);
-            this.Controls.Add(this.exit_but);
             this.Controls.Add(this.back_but);
             this.Controls.Add(this.v_anal_table);
             this.Name = "Search_v_table_form";
             this.Text = "Результат поиска";
+            this.Load += new System.EventHandler(this.Search_v_table_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).EndInit();
             this.ResumeLayout(false);
 
@@ -164,7 +146,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView v_anal_table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.Button back_but;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn num_doc_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn tovar_column;
@@ -174,7 +156,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn count_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn price_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn ed_izm_column;
-        private System.Windows.Forms.Button back_but;
-        private System.Windows.Forms.Button exit_but;
     }
 }

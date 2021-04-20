@@ -26,31 +26,18 @@ namespace ASTAX_5
 
         private void V_anal_form_Load(object sender, EventArgs e)
         {
-            resetTable();
-        }
-
-        private void back_but_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            
         }
 
         private void exit_but_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void resetTable()
-        {
-        }
-
-        private void clear_but_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
 
         private void search_but_Click(object sender, EventArgs e)
         {
-
+            Search_v_table_form form = new Search_v_table_form(inputoutput.GetAll());
+            form.ShowDialog();
         }
     }
 }

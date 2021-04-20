@@ -58,15 +58,15 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class Price
+    public class Price
     {
-        public long id;
-        public string date;
-        public double price;
-        public long org;
-        public long product;
-        public long edizm;
-        public long fasovka;
+        public long id { get; set; }
+        public string date { get; set; }
+        public double price { get; set; }
+        public long org { get; set; }
+        public long product { get; set; }
+        public long edizm { get; set; }
+        public long fasovka { get; set; }
 
         public Price(long id, string date, double price, long org, long product, long edizm, long fasovka)
         {

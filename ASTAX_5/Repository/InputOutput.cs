@@ -61,7 +61,7 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class InputOutput
+    public class InputOutput
     {
         public long id;
         public string date;
@@ -70,7 +70,7 @@ namespace ASTAX_5.Repository
         public double price;
         public long org;
         public long product;
-        public long edizm;;
+        public long edizm;
 
         public InputOutput(long id, string date, string number, long count, double price, long org, long product, long edizm)
         {

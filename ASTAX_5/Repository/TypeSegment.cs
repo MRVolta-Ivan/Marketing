@@ -49,11 +49,11 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class TypeSegment
+    public class TypeSegment
     {
-        public long id;
-        public string shifr;
-        public string name;
+        public long id { get; set; }
+        public string shifr { get; set; }
+        public string name { get; set; }
 
         public TypeSegment(long id, string shifr, string name)
         {

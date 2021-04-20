@@ -23,9 +23,10 @@ namespace ASTAX_5
             {
                 DBConnection.instance.Init(textBoxUserName.Text, textBoxPassword.Text);
 
-                Menu_form menu = new Menu_form(this);
-                menu.Show();
+                Menu_form menu = new Menu_form();
                 Hide();
+                menu.ShowDialog();
+                Show();
             }
             catch (Exception ex)
             {

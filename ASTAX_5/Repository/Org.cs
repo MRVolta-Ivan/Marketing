@@ -55,12 +55,12 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class Org
+    public class Org
     {
-        public long id;
-        public string shifr;
-        public string name;
-        public string adress;
+        public long id { get; set; }
+        public string shifr { get; set; }
+        public string name { get; set; }
+        public string adress { get; set; }
 
         public Org(long id, string shifr, string name, string adress)
         {

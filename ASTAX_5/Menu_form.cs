@@ -12,26 +12,25 @@ namespace ASTAX_5
 {
     public partial class Menu_form : Form
     {
-        bool exit;
+        private bool exit = false;
 
-        Form loginForm;
-
-        public Menu_form(Form loginForm)
+        public Menu_form()
         {
             InitializeComponent();
-            exit = true;
-            this.loginForm = loginForm;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            exit = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conc_anal_form form = new Conc_anal_form();
+            Menu_c_form form = new Menu_c_form();
+            Hide();
             form.ShowDialog();
+            Show();
         }
 
         private void exit_but_Click(object sender, EventArgs e)
@@ -46,14 +45,14 @@ namespace ASTAX_5
 
             if (exit)
                 Application.Exit();
-            else
-                loginForm.Show();
         }
 
         private void V_anal_but_Click(object sender, EventArgs e)
         {
-            Search_v_form form = new Search_v_form();
+            Menu_v_form form = new Menu_v_form();
+            Hide();
             form.ShowDialog();
+            Show();
         }
     }
 }
