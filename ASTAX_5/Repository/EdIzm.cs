@@ -55,11 +55,11 @@ namespace ASTAX_5.Repository
     }
 
 
-    class EdIzm
+    public class EdIzm
     {
-        public long id;
-        public string shifr;
-        public string name;
+        public long id { get; set; }
+        public string shifr { get; set; }
+        public string name { get; set; }
 
         public EdIzm(long id, string shifr, string name)
         {

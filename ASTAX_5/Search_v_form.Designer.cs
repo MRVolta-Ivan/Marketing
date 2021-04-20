@@ -40,10 +40,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelToPrice = new System.Windows.Forms.Label();
             this.priceto_textbox = new System.Windows.Forms.TextBox();
-            this.shifr_tovar_textbox = new System.Windows.Forms.TextBox();
-            this.tovar_textbox = new System.Windows.Forms.TextBox();
             this.num_doc_label = new System.Windows.Forms.Label();
             this.num_doc_combox = new System.Windows.Forms.ComboBox();
+            this.tovar_combobox = new System.Windows.Forms.ComboBox();
+            this.tovar_shifr_combobox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // org_label
@@ -120,6 +120,7 @@
             // 
             // org_combox
             // 
+            this.org_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.org_combox.FormattingEnabled = true;
             this.org_combox.Location = new System.Drawing.Point(137, 68);
             this.org_combox.Name = "org_combox";
@@ -128,6 +129,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(137, 148);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(311, 20);
@@ -149,20 +151,6 @@
             this.priceto_textbox.Size = new System.Drawing.Size(134, 20);
             this.priceto_textbox.TabIndex = 53;
             // 
-            // shifr_tovar_textbox
-            // 
-            this.shifr_tovar_textbox.Location = new System.Drawing.Point(137, 187);
-            this.shifr_tovar_textbox.Name = "shifr_tovar_textbox";
-            this.shifr_tovar_textbox.Size = new System.Drawing.Size(311, 20);
-            this.shifr_tovar_textbox.TabIndex = 54;
-            // 
-            // tovar_textbox
-            // 
-            this.tovar_textbox.Location = new System.Drawing.Point(137, 108);
-            this.tovar_textbox.Name = "tovar_textbox";
-            this.tovar_textbox.Size = new System.Drawing.Size(311, 20);
-            this.tovar_textbox.TabIndex = 55;
-            // 
             // num_doc_label
             // 
             this.num_doc_label.AutoSize = true;
@@ -174,21 +162,40 @@
             // 
             // num_doc_combox
             // 
+            this.num_doc_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.num_doc_combox.FormattingEnabled = true;
             this.num_doc_combox.Location = new System.Drawing.Point(137, 27);
             this.num_doc_combox.Name = "num_doc_combox";
             this.num_doc_combox.Size = new System.Drawing.Size(311, 21);
             this.num_doc_combox.TabIndex = 56;
             // 
+            // tovar_combobox
+            // 
+            this.tovar_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tovar_combobox.FormattingEnabled = true;
+            this.tovar_combobox.Location = new System.Drawing.Point(137, 108);
+            this.tovar_combobox.Name = "tovar_combobox";
+            this.tovar_combobox.Size = new System.Drawing.Size(311, 21);
+            this.tovar_combobox.TabIndex = 58;
+            // 
+            // tovar_shifr_combobox
+            // 
+            this.tovar_shifr_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tovar_shifr_combobox.FormattingEnabled = true;
+            this.tovar_shifr_combobox.Location = new System.Drawing.Point(137, 187);
+            this.tovar_shifr_combobox.Name = "tovar_shifr_combobox";
+            this.tovar_shifr_combobox.Size = new System.Drawing.Size(311, 21);
+            this.tovar_shifr_combobox.TabIndex = 59;
+            // 
             // Search_v_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 368);
+            this.Controls.Add(this.tovar_shifr_combobox);
+            this.Controls.Add(this.tovar_combobox);
             this.Controls.Add(this.num_doc_label);
             this.Controls.Add(this.num_doc_combox);
-            this.Controls.Add(this.tovar_textbox);
-            this.Controls.Add(this.shifr_tovar_textbox);
             this.Controls.Add(this.priceto_textbox);
             this.Controls.Add(this.labelToPrice);
             this.Controls.Add(this.dateTimePicker1);
@@ -222,9 +229,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelToPrice;
         private System.Windows.Forms.TextBox priceto_textbox;
-        private System.Windows.Forms.TextBox shifr_tovar_textbox;
-        private System.Windows.Forms.TextBox tovar_textbox;
         private System.Windows.Forms.Label num_doc_label;
         private System.Windows.Forms.ComboBox num_doc_combox;
+        private System.Windows.Forms.ComboBox tovar_combobox;
+        private System.Windows.Forms.ComboBox tovar_shifr_combobox;
     }
 }

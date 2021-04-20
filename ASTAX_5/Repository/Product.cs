@@ -53,11 +53,11 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class Product
+    public class Product
     {
-        public long id;
-        public string shifr;
-        public string name;
+        public long id { get; set; }
+        public string shifr { get; set; }
+        public string name { get; set; }
 
         public Product(long id, string shifr, string name)
         {

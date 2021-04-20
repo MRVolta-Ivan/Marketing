@@ -48,11 +48,11 @@ namespace ASTAX_5.Repository
         }
     }
 
-    class Segment
+    public class Segment
     {
-        public long id;
-        public long org;
-        public long typesegment;
+        public long id { get; set; }
+        public long org { get; set; }
+        public long typesegment { get; set; }
 
         public Segment(long id, long org, long typesegment)
         {
