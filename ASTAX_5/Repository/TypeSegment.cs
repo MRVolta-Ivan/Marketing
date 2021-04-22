@@ -47,6 +47,19 @@ namespace ASTAX_5.Repository
 
             return index;
         }
+
+        public List<TypeSegment> GetUniqueFromToDate(string from, string to)
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select distinct t.* from \"Type_segment\" t, " +
+                "(select * from \"Input_output\" " +
+                "where " +
+                "extract(YEAR from \"date\") >= " + from +
+                " and extract(YEAR from \"date\") <= " + to + ") as io, " +
+                "\"Segment\" s " +
+                "where s.\"PK_Org\" = io.\"PK_Org\" and t.\"PK_Type_segment\" = s.\"PK_Type_segment\""
+                ));
+        }
     }
 
     public class TypeSegment

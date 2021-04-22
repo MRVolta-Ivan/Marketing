@@ -19,7 +19,7 @@ namespace ASTAX_5.Repository
                 result.Add(
                     new InputOutput(
                         Convert.ToInt64(i[0]),
-                        i[1],
+                        i[1].Split(' ')[0],
                         i[2],
                         Convert.ToInt64(i[3]),
                         Convert.ToDouble(i[4]),
@@ -34,6 +34,49 @@ namespace ASTAX_5.Repository
         public List<InputOutput> GetAll()
         {
             return Mapper(connection.ExecuteSQL("select * from getlistinputoutput()"));
+        }
+
+        public List<List<string>> GetUniqNumDoc()
+        {
+            return connection.ExecuteSQL(
+                "select distinct \"number_doc\" from \"Input_output\"");
+
+        }
+
+        public List<List<string>> GetUniqYears()
+        {
+            return connection.ExecuteSQL(
+                "select distinct extract(YEAR from \"date\") as \"year\" from \"Input_output\" order by \"year\""
+                );
+        }
+
+        public List<InputOutput> GetFromToDate(string from, string to)
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select * from \"Input_output\" where extract(YEAR from \"date\") >= " + from + " and extract(YEAR from \"date\") <= " + to + ""));
+        }
+
+        public string GetSumSegmentProduct(string fromdate, string todate, long product, long segment)
+        {
+            return connection.ExecuteSQL(
+                "select distinct sum(\"price_for_one\" * \"count\") from (select * from \"Input_output\" "+
+
+              "where extract(YEAR from \"date\") >= "+fromdate+" "+
+
+              "and extract(YEAR from \"date\") <= "+todate+") as io, "+
+			  "\"Type_segment\" ts, \"Segment\" s "+
+              "where io.\"PK_product\" = "+product+" "+
+
+              "and io.\"PK_Org\" = s.\"PK_Org\""+
+
+              "and s.\"PK_Type_segment\" = ts.\"PK_Type_segment\""+
+
+              "and ts.\"PK_Type_segment\" = "+segment+"")[0][0];
+        }
+
+        public List<InputOutput> Search(string sql)
+        {
+            return Mapper(connection.ExecuteSQL(sql));
         }
 
         public long Add(

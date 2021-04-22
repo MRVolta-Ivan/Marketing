@@ -31,6 +31,10 @@ namespace ASTAX_5.Repository
             return Mapper(connection.ExecuteSQL("select * from getlistproduct()"));
         }
 
+        public List<Product> GetProductIO()
+        {
+            return Mapper(connection.ExecuteSQL("select distinct o.* from \"Product\" o, \"Input_output\" i where o.\"PK_Product\" = i.\"PK_product\""));
+        }
         public Product GetById(long id)
         {
             return Mapper(connection.ExecuteSQL("select * from \"Product\" where \"PK_Product\" = "+id+""))[0];
@@ -50,6 +54,18 @@ namespace ASTAX_5.Repository
                     index = data[i].id;
 
             return index;
+        }
+
+        public List<Product> GetUniqueFromToDate(string from, string to)
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select distinct p.* from \"Product\" p, " +
+                "(select * from \"Input_output\" " +
+                "where " +
+                "extract(YEAR from \"date\") >= " + from +
+                " and extract(YEAR from \"date\") <= " + to + ") as io " +
+                "where p.\"PK_Product\" = io.\"PK_product\""
+                ));
         }
     }
 
