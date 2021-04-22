@@ -50,11 +50,28 @@ namespace ASTAX_5.Repository
                 );
         }
 
-        public List<List<string>> Analis(string from, string to)
+        public List<InputOutput> GetFromToDate(string from, string to)
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select * from \"Input_output\" where extract(YEAR from \"date\") >= " + from + " and extract(YEAR from \"date\") <= " + to + ""));
+        }
+
+        public string GetSumSegmentProduct(string fromdate, string todate, long product, long segment)
         {
             return connection.ExecuteSQL(
-                ""
-                );
+                "select distinct sum(\"price_for_one\" * \"count\") from (select * from \"Input_output\" "+
+
+              "where extract(YEAR from \"date\") >= "+fromdate+" "+
+
+              "and extract(YEAR from \"date\") <= "+todate+") as io, "+
+			  "\"Type_segment\" ts, \"Segment\" s "+
+              "where io.\"PK_product\" = "+product+" "+
+
+              "and io.\"PK_Org\" = s.\"PK_Org\""+
+
+              "and s.\"PK_Type_segment\" = ts.\"PK_Type_segment\""+
+
+              "and ts.\"PK_Type_segment\" = "+segment+"")[0][0];
         }
 
         public List<InputOutput> Search(string sql)

@@ -58,11 +58,15 @@ namespace ASTAX_5
             // 
             // doc_table
             // 
+            this.doc_table.AllowUserToAddRows = false;
+            this.doc_table.AllowUserToDeleteRows = false;
+            this.doc_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.doc_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.doc_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.segm_column});
             this.doc_table.Location = new System.Drawing.Point(23, 74);
             this.doc_table.Name = "doc_table";
+            this.doc_table.ReadOnly = true;
             this.doc_table.Size = new System.Drawing.Size(938, 434);
             this.doc_table.TabIndex = 70;
             // 
@@ -70,6 +74,7 @@ namespace ASTAX_5
             // 
             this.segm_column.HeaderText = "Сегмент";
             this.segm_column.Name = "segm_column";
+            this.segm_column.ReadOnly = true;
             // 
             // Doc_v_form_final
             // 
