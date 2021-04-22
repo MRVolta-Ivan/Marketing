@@ -31,6 +31,10 @@ namespace ASTAX_5.Repository
             return Mapper(connection.ExecuteSQL("select * from getlistproduct()"));
         }
 
+        public List<Product> GetProductIO()
+        {
+            return Mapper(connection.ExecuteSQL("select distinct o.* from \"Product\" o, \"Input_output\" i where o.\"PK_Product\" = i.\"PK_product\""));
+        }
         public Product GetById(long id)
         {
             return Mapper(connection.ExecuteSQL("select * from \"Product\" where \"PK_Product\" = "+id+""))[0];

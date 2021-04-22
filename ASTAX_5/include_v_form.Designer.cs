@@ -36,13 +36,13 @@
             this.plus_exit_but = new System.Windows.Forms.Button();
             this.org_combox = new System.Windows.Forms.ComboBox();
             this.incude_table = new System.Windows.Forms.DataGridView();
-            this.plus_but = new System.Windows.Forms.Button();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tovar_column = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tovar_shifr_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.count_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ed_izmer_column = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.plus_but = new System.Windows.Forms.Button();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.incude_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,25 +126,6 @@
             this.incude_table.TabIndex = 49;
             this.incude_table.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.incude_table_CellValueChanged);
             // 
-            // plus_but
-            // 
-            this.plus_but.Location = new System.Drawing.Point(843, 139);
-            this.plus_but.Name = "plus_but";
-            this.plus_but.Size = new System.Drawing.Size(122, 48);
-            this.plus_but.TabIndex = 64;
-            this.plus_but.Text = "Добавить";
-            this.plus_but.UseVisualStyleBackColor = true;
-            this.plus_but.Click += new System.EventHandler(this.plus_but_Click);
-            // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.Location = new System.Drawing.Point(171, 51);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(191, 20);
-            this.dateTimePicker.TabIndex = 65;
-            this.dateTimePicker.Value = new System.DateTime(2021, 4, 19, 12, 50, 8, 0);
-            // 
             // tovar_column
             // 
             this.tovar_column.HeaderText = "Товар";
@@ -174,6 +155,26 @@
             this.ed_izmer_column.Name = "ed_izmer_column";
             this.ed_izmer_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ed_izmer_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // plus_but
+            // 
+            this.plus_but.Location = new System.Drawing.Point(843, 139);
+            this.plus_but.Name = "plus_but";
+            this.plus_but.Size = new System.Drawing.Size(122, 48);
+            this.plus_but.TabIndex = 64;
+            this.plus_but.Text = "Добавить";
+            this.plus_but.UseVisualStyleBackColor = true;
+            this.plus_but.Click += new System.EventHandler(this.plus_but_Click);
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.CustomFormat = "dd.mm.yyyy";
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(171, 51);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(191, 20);
+            this.dateTimePicker.TabIndex = 65;
+            this.dateTimePicker.Value = new System.DateTime(2021, 4, 19, 12, 50, 8, 0);
             // 
             // Include_v_form
             // 

@@ -19,7 +19,7 @@ namespace ASTAX_5.Repository
                 result.Add(
                     new InputOutput(
                         Convert.ToInt64(i[0]),
-                        i[1],
+                        i[1].Split(' ')[0],
                         i[2],
                         Convert.ToInt64(i[3]),
                         Convert.ToDouble(i[4]),
@@ -34,6 +34,32 @@ namespace ASTAX_5.Repository
         public List<InputOutput> GetAll()
         {
             return Mapper(connection.ExecuteSQL("select * from getlistinputoutput()"));
+        }
+
+        public List<List<string>> GetUniqNumDoc()
+        {
+            return connection.ExecuteSQL(
+                "select distinct \"number_doc\" from \"Input_output\"");
+
+        }
+
+        public List<List<string>> GetUniqYears()
+        {
+            return connection.ExecuteSQL(
+                "select distinct extract(YEAR from \"date\") as \"year\" from \"Input_output\" order by \"year\""
+                );
+        }
+
+        public List<List<string>> Analis(string from, string to)
+        {
+            return connection.ExecuteSQL(
+                ""
+                );
+        }
+
+        public List<InputOutput> Search(string sql)
+        {
+            return Mapper(connection.ExecuteSQL(sql));
         }
 
         public long Add(
