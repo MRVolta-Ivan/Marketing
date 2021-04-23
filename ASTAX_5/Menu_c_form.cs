@@ -16,5 +16,40 @@ namespace ASTAX_5
         {
             InitializeComponent();
         }
+
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void back_but_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void include_but_Click(object sender, EventArgs e)
+        {
+            Include_c_form form = new Include_c_form();
+            Hide();
+            form.ShowDialog();
+            Show();
+            
+        }
+
+        private void search_but_Click(object sender, EventArgs e)
+        {
+            Search_c_form form = new Search_c_form();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
+
+        private void anal_but_Click(object sender, EventArgs e)
+        {
+            Doc_c_form form = new Doc_c_form();
+            Hide();
+            form.ShowDialog();
+            Show();
+        }
     }
 }

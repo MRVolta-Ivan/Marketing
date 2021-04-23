@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASTAX_5.Repository
 {
-    class Pricerepository
+    class PriceRepository
     {
         DBConnection connection = DBConnection.instance;
 
@@ -19,17 +19,40 @@ namespace ASTAX_5.Repository
                 result.Add(
                     new Price(
                         Convert.ToInt64(i[0]),
-                        i[1],
+                        i[1].Split(' ')[0],
                        Convert.ToDouble(i[2]),
                        Convert.ToInt64(i[3]),
                        Convert.ToInt64(i[4]),
-                       Convert.ToInt64(i[5]),
-                       Convert.ToInt64(i[6])));
+                       Convert.ToInt64(i[5])
+                       ));
             }
 
             return result;
         }
 
+        public List<Price> Search(string sql)
+        {
+            return Mapper(connection.ExecuteSQL(sql));
+        }
+
+        public List<List<string>> Analis(string from, string to)
+        {
+            return connection.ExecuteSQL(
+             "select distinct \"name_org\", min(\"price_for_one\"), max(\"price_for_one\"), sum(\"price_for_one\") / count(\"price_for_one\") " +
+             "from \"Price\" p, \"Org\" o " +
+             "where extract(YEAR from \"date\") >= " + from + " " +
+             "and extract(YEAR from \"date\") <= " + to + " " +
+             "and p.\"PK_Org\" = o.\"PK_Org\" " +
+             "group by \"name_org\" "
+             );    
+        }
+
+        public List<List<string>> GetUniqYears()
+        {
+            return connection.ExecuteSQL(
+                "select distinct extract(YEAR from \"date\") as \"year\" from \"Price\" order by \"year\""
+                );
+        }
         public List<Price> GetAll()
         {
             return Mapper(connection.ExecuteSQL("select * from getlistprice()"));
@@ -40,12 +63,12 @@ namespace ASTAX_5.Repository
             double price,
             long org,
             long product,
-            long edizm,
-            long fasovka)
+            long edizm
+           )
         {
             connection.ExecuteSQL("call addprice('"+date+"', "
                 +price.ToString().Replace(',', '.')
-                +", "+org+", "+product+", "+edizm+", "+fasovka+")");
+                +", "+org+", "+product+", "+edizm+")");
 
             List<Price> data = GetAll();
 
@@ -66,9 +89,9 @@ namespace ASTAX_5.Repository
         public long org { get; set; }
         public long product { get; set; }
         public long edizm { get; set; }
-        public long fasovka { get; set; }
+        
 
-        public Price(long id, string date, double price, long org, long product, long edizm, long fasovka)
+        public Price(long id, string date, double price, long org, long product, long edizm)
         {
             this.id = id;
             this.date = date;
@@ -76,7 +99,6 @@ namespace ASTAX_5.Repository
             this.org = org;
             this.product = product;
             this.edizm = edizm;
-            this.fasovka = fasovka;
         }
     }
 }

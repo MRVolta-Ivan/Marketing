@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.incude_table = new System.Windows.Forms.DataGridView();
+            this.tovar_column = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tovar_shifr_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ed_izmer_column = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.exit_but = new System.Windows.Forms.Button();
             this.plus_exit_but = new System.Windows.Forms.Button();
@@ -36,10 +40,6 @@
             this.date_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.org_combox = new System.Windows.Forms.ComboBox();
-            this.tovar_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tovar_shifr_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ed_izmer_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.incude_table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,31 @@
             this.incude_table.Name = "incude_table";
             this.incude_table.Size = new System.Drawing.Size(781, 398);
             this.incude_table.TabIndex = 30;
+            this.incude_table.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.incude_table_CellValueChanged);
+            // 
+            // tovar_column
+            // 
+            this.tovar_column.HeaderText = "Товар";
+            this.tovar_column.Name = "tovar_column";
+            this.tovar_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tovar_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tovar_shifr_column
+            // 
+            this.tovar_shifr_column.HeaderText = "Шифр товара";
+            this.tovar_shifr_column.Name = "tovar_shifr_column";
+            // 
+            // price_column
+            // 
+            this.price_column.HeaderText = "Цена";
+            this.price_column.Name = "price_column";
+            // 
+            // ed_izmer_column
+            // 
+            this.ed_izmer_column.HeaderText = "Ед-цы измерения";
+            this.ed_izmer_column.Name = "ed_izmer_column";
+            this.ed_izmer_column.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ed_izmer_column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button1
             // 
@@ -65,6 +90,7 @@
             this.button1.TabIndex = 69;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // exit_but
             // 
@@ -74,6 +100,7 @@
             this.exit_but.TabIndex = 68;
             this.exit_but.Text = "Выйти";
             this.exit_but.UseVisualStyleBackColor = true;
+            this.exit_but.Click += new System.EventHandler(this.exit_but_Click);
             // 
             // plus_exit_but
             // 
@@ -83,9 +110,11 @@
             this.plus_exit_but.TabIndex = 67;
             this.plus_exit_but.Text = "Добавить и выйти";
             this.plus_exit_but.UseVisualStyleBackColor = true;
+            this.plus_exit_but.Click += new System.EventHandler(this.plus_exit_but_Click);
             // 
             // dateTimePicker
             // 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker.Location = new System.Drawing.Point(170, 17);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(191, 20);
@@ -112,31 +141,12 @@
             // 
             // org_combox
             // 
+            this.org_combox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.org_combox.FormattingEnabled = true;
             this.org_combox.Location = new System.Drawing.Point(170, 52);
             this.org_combox.Name = "org_combox";
             this.org_combox.Size = new System.Drawing.Size(191, 21);
             this.org_combox.TabIndex = 70;
-            // 
-            // tovar_column
-            // 
-            this.tovar_column.HeaderText = "Товар";
-            this.tovar_column.Name = "tovar_column";
-            // 
-            // tovar_shifr_column
-            // 
-            this.tovar_shifr_column.HeaderText = "Шифр товара";
-            this.tovar_shifr_column.Name = "tovar_shifr_column";
-            // 
-            // price_column
-            // 
-            this.price_column.HeaderText = "Цена";
-            this.price_column.Name = "price_column";
-            // 
-            // ed_izmer_column
-            // 
-            this.ed_izmer_column.HeaderText = "Ед-цы измерения";
-            this.ed_izmer_column.Name = "ed_izmer_column";
             // 
             // Include_c_form
             // 
@@ -153,6 +163,7 @@
             this.Controls.Add(this.incude_table);
             this.Name = "Include_c_form";
             this.Text = "Ввод данных";
+            this.Load += new System.EventHandler(this.Include_c_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incude_table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,9 +179,9 @@
         private System.Windows.Forms.Label date_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox org_combox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tovar_column;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tovar_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn tovar_shifr_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn price_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ed_izmer_column;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ed_izmer_column;
     }
 }

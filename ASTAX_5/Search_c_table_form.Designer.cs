@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exit_but = new System.Windows.Forms.Button();
             this.back_but = new System.Windows.Forms.Button();
             this.v_anal_table = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tovar_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tovar_shifr_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,23 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).BeginInit();
             this.SuspendLayout();
             // 
-            // exit_but
-            // 
-            this.exit_but.Location = new System.Drawing.Point(506, 12);
-            this.exit_but.Name = "exit_but";
-            this.exit_but.Size = new System.Drawing.Size(175, 37);
-            this.exit_but.TabIndex = 6;
-            this.exit_but.Text = "Выйти в меню";
-            this.exit_but.UseVisualStyleBackColor = true;
-            // 
             // back_but
             // 
-            this.back_but.Location = new System.Drawing.Point(303, 12);
+            this.back_but.Location = new System.Drawing.Point(12, 12);
             this.back_but.Name = "back_but";
             this.back_but.Size = new System.Drawing.Size(175, 37);
             this.back_but.TabIndex = 5;
             this.back_but.Text = "Вернуться к поиску данных";
             this.back_but.UseVisualStyleBackColor = true;
+            this.back_but.Click += new System.EventHandler(this.back_but_Click);
             // 
             // v_anal_table
             // 
@@ -67,7 +57,6 @@
             this.v_anal_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.v_anal_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.v_anal_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
             this.date_column,
             this.tovar_column,
             this.tovar_shifr_col,
@@ -80,13 +69,6 @@
             this.v_anal_table.ReadOnly = true;
             this.v_anal_table.Size = new System.Drawing.Size(959, 464);
             this.v_anal_table.TabIndex = 4;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "ПК";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
             // 
             // date_column
             // 
@@ -135,22 +117,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 531);
-            this.Controls.Add(this.exit_but);
             this.Controls.Add(this.back_but);
             this.Controls.Add(this.v_anal_table);
             this.Name = "Search_c_table_form";
             this.Text = "Результат поиска";
+            this.Load += new System.EventHandler(this.Search_c_table_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.v_anal_table)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button exit_but;
         private System.Windows.Forms.Button back_but;
         private System.Windows.Forms.DataGridView v_anal_table;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn date_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn tovar_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn tovar_shifr_col;

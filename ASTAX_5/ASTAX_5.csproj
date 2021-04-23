@@ -87,6 +87,12 @@
     <Compile Include="Doc_c_form.Designer.cs">
       <DependentUpon>Doc_c_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doc_c_form_final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doc_c_form_final.Designer.cs">
+      <DependentUpon>Doc_c_form_final.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doc_v_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Doc_c_form.resx">
       <DependentUpon>Doc_c_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doc_c_form_final.resx">
+      <DependentUpon>Doc_c_form_final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doc_v_form.resx">
       <DependentUpon>Doc_v_form.cs</DependentUpon>
