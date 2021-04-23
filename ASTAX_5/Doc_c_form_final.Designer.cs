@@ -41,6 +41,8 @@ namespace ASTAX_5
             // 
             // doc_table
             // 
+            this.doc_table.AllowUserToAddRows = false;
+            this.doc_table.AllowUserToDeleteRows = false;
             this.doc_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.doc_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.doc_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -50,6 +52,7 @@ namespace ASTAX_5
             this.sr_price_column});
             this.doc_table.Location = new System.Drawing.Point(25, 75);
             this.doc_table.Name = "doc_table";
+            this.doc_table.ReadOnly = true;
             this.doc_table.Size = new System.Drawing.Size(929, 434);
             this.doc_table.TabIndex = 53;
             // 
@@ -57,21 +60,25 @@ namespace ASTAX_5
             // 
             this.org_column.HeaderText = "Организации";
             this.org_column.Name = "org_column";
+            this.org_column.ReadOnly = true;
             // 
             // min_price_column
             // 
             this.min_price_column.HeaderText = "Минимальная цена";
             this.min_price_column.Name = "min_price_column";
+            this.min_price_column.ReadOnly = true;
             // 
             // max_price_column
             // 
             this.max_price_column.HeaderText = "Максимальная цена";
             this.max_price_column.Name = "max_price_column";
+            this.max_price_column.ReadOnly = true;
             // 
             // sr_price_column
             // 
             this.sr_price_column.HeaderText = "Средняя цена";
             this.sr_price_column.Name = "sr_price_column";
+            this.sr_price_column.ReadOnly = true;
             // 
             // save_but
             // 

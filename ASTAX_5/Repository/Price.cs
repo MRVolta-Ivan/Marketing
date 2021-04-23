@@ -38,8 +38,13 @@ namespace ASTAX_5.Repository
         public List<List<string>> Analis(string from, string to)
         {
             return connection.ExecuteSQL(
-                ""
-                );
+             "select distinct \"name_org\", min(\"price_for_one\"), max(\"price_for_one\"), sum(\"price_for_one\") / count(\"price_for_one\") " +
+             "from \"Price\" p, \"Org\" o " +
+             "where extract(YEAR from \"date\") >= " + from + " " +
+             "and extract(YEAR from \"date\") <= " + to + " " +
+             "and p.\"PK_Org\" = o.\"PK_Org\" " +
+             "group by \"name_org\" "
+             );    
         }
 
         public List<List<string>> GetUniqYears()
