@@ -35,6 +35,12 @@ namespace ASTAX_5.Repository
         {
             return Mapper(connection.ExecuteSQL("select distinct o.* from \"Product\" o, \"Input_output\" i where o.\"PK_Product\" = i.\"PK_product\""));
         }
+
+        public List<Product> GetProductIO2()
+        {
+            return Mapper(connection.ExecuteSQL("select distinct o.* from \"Product\" o, \"Price\" i where o.\"PK_Product\" = i.\"PK_Product\""));
+        }
+
         public Product GetById(long id)
         {
             return Mapper(connection.ExecuteSQL("select * from \"Product\" where \"PK_Product\" = "+id+""))[0];

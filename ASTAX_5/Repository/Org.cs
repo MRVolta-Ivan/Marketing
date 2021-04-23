@@ -20,8 +20,8 @@ namespace ASTAX_5.Repository
                     new Org(
                         Convert.ToInt64(i[0]),
                         i[1],
-                        i[2],
-                        i[3]));
+                        i[2]
+                        ));
             }
 
             return result;
@@ -36,6 +36,12 @@ namespace ASTAX_5.Repository
         {
             return Mapper(connection.ExecuteSQL(
                 "select distinct o.* from \"Org\" o, \"Input_output\" i where o.\"PK_Org\" = i.\"PK_Org\""));
+        }
+
+        public List<Org> GetOrgIO2()
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select distinct o.* from \"Org\" o, \"Price\" i where o.\"PK_Org\" = i.\"PK_Org\""));
         }
 
         public Org GetById(long id)
@@ -66,14 +72,14 @@ namespace ASTAX_5.Repository
         public long id { get; set; }
         public string shifr { get; set; }
         public string name { get; set; }
-        public string adress { get; set; }
+        
 
-        public Org(long id, string shifr, string name, string adress)
+        public Org(long id, string shifr, string name)
         {
             this.id = id;
             this.shifr = shifr;
             this.name = name;
-            this.adress = adress;
+            
         }
     }
 }

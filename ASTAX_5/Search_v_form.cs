@@ -32,7 +32,7 @@ namespace ASTAX_5
             num_doc_combox.Items.Add("");
 
             List<Org> orgio = Orgs.GetOrgIO();
-            orgio.Add(new Org(-1, "", "", ""));
+            orgio.Add(new Org(-1, "", ""));
             org_combox.DataSource = orgio;
             org_combox.DisplayMember = "name";
             org_combox.ValueMember = "id";
