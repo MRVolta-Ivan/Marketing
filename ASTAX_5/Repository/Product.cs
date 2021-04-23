@@ -61,6 +61,18 @@ namespace ASTAX_5.Repository
 
             return index;
         }
+
+        public List<Product> GetUniqueFromToDate(string from, string to)
+        {
+            return Mapper(connection.ExecuteSQL(
+                "select distinct p.* from \"Product\" p, " +
+                "(select * from \"Input_output\" " +
+                "where " +
+                "extract(YEAR from \"date\") >= " + from +
+                " and extract(YEAR from \"date\") <= " + to + ") as io " +
+                "where p.\"PK_Product\" = io.\"PK_product\""
+                ));
+        }
     }
 
     public class Product

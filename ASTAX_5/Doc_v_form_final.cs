@@ -32,7 +32,17 @@ namespace ASTAX_5
 
         private void Doc_v_form_final_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < list[0].Count - 1; i++)
+            {
+                DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                col.Name = list[0][i + 1];
+                doc_table.Columns.Add(col);
+            }
 
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                doc_table.Rows.Add(list[i + 1].ToArray());
+            }
         }
     }
 }

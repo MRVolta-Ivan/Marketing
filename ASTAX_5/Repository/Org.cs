@@ -20,8 +20,8 @@ namespace ASTAX_5.Repository
                     new Org(
                         Convert.ToInt64(i[0]),
                         i[1],
-                        i[2]
-                        ));
+                        i[2]));
+
             }
 
             return result;
@@ -72,14 +72,14 @@ namespace ASTAX_5.Repository
         public long id { get; set; }
         public string shifr { get; set; }
         public string name { get; set; }
-        
+
 
         public Org(long id, string shifr, string name)
         {
             this.id = id;
             this.shifr = shifr;
             this.name = name;
-            
+
         }
     }
 }
